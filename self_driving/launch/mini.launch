@@ -1,0 +1,7 @@
+<launch>
+    <include file="$(find rplidar_ros)/launch/rplidar.launch" />
+    <include file="$(find usb_cam)/launch/usb_cam-test.launch" />
+    <node name="main_node" pkg="self_driving" type="main.py" output="screen"/>
+    <node name="flag_node" pkg="self_driving" type="flag_publisher.py" output="screen"/>
+    <node name="steering_node" pkg="self_driving" type="steering_publisher.py" output="screen"/>
+</launch>
