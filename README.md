@@ -22,3 +22,9 @@ $ rosrun scout_bringup bringup_can2usb.bash (재부팅 or USB 재연결시 실�
 
 Start Node
 $ roslaunch scout_bringup scout_minimal.launch (using CAN)
+
+start LiDAR
+$ roslaunch scout_bringup open
+
+start realsense_camera
+$ roslaunch realsense2_camera rs_camera.launch
