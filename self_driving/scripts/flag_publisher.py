@@ -25,8 +25,9 @@ class rplidar_sub:
             if rp_data.ranges[29-i] < 0.7 or rp_data.ranges[330+i] < 0.7: #publish 1 when the LiDAR detects something within 0.7m in the range of [0, 30] or [330, 360] degrees.
                 self.pub.publish(1)
                 return 
-                
-        self.pub.publish(0) #publish 0 when nothing is detected within 0.7m
+            
+    def callback2(self, rp_data):
+        print("0: ", rp_data.range[0], "90: ",rp_data.range[90], "180: ", rp_data.range[180], "270: ", rp_data.range[270])
         
 
 if __name__ == "__main__":
