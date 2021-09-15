@@ -1,0 +1,5 @@
+<launch>
+    <!-- <include file="$(find usb_cam)/launch/usb_cam-test.launch"/> -->
+    <node name="aruco_detector" pkg="aruco_detector" type="aruco_detector.py" respawn="false" output="screen"/>
+    <node name="aruco_turnaround" pkg="aruco_detector" type="aruco_turnaround.py" respawn="false" output="screen"/>
+</launch>
